@@ -52,11 +52,7 @@ Internal network:
 
 The DC provides **AD DS**, **DNS**, **DHCP**, and **NAT** so the client can reach the Internet through the server.
 
-> Insert image here:
->
-> ```markdown
 > ![Lab topology](images/lab-topology.png)
-> ```
 
 ---
 
@@ -66,8 +62,6 @@ The DC provides **AD DS**, **DNS**, **DHCP**, and **NAT** so the client can reac
 
 Create a new VM in VirtualBox for the domain controller and install Windows Server 2019.
 
-> Screenshot:
->
 > ![Windows Server 2019 VM](images/ws2019-vm.png)
 
 ---
@@ -86,8 +80,6 @@ On the **internal NIC**, configure:
 - Default gateway: *(empty)*
 - DNS: `127.0.0.1` (the DC will run DNS)
 
-> Screenshots:
->
 > ![Internal NIC configuration](images/ws2019-nic-internal.png)  
 > ![IP settings](images/ws2019-ip-config.png)
 
@@ -102,8 +94,6 @@ On the server:
 3. Create a new forest and domain (for example: `mydomain.com`).
 4. Create a dedicated domain admin account and use it for the rest of the lab.
 
-> Screenshots:
->
 > ![Install AD DS](images/install-adds.png)  
 > ![Create new domain](images/create-domain.png)
 
@@ -118,8 +108,6 @@ To allow the internal network to access the Internet:
 3. Set the **external NIC** as the public interface.
 4. Enable NAT so traffic from `172.16.0.0/24` is translated out to the Internet.
 
-> Screenshots:
->
 > ![Install RRAS](images/install-rras.png)  
 > ![Configure NAT](images/configure-nat.png)
 
@@ -139,8 +127,6 @@ On the domain controller:
    - DNS server: `172.16.0.1`
    - DNS domain: `mydomain.com`
 
-> Screenshots:
->
 > ![DHCP scope](images/dhcp-scope.png)  
 > ![DHCP leases result](images/dhcp-result.png)
 
@@ -193,8 +179,6 @@ The client should obtain:
 
 Verify the configuration with `ipconfig` from a command prompt.
 
-> Screenshots:
->
 > ![Client network adapter](images/client-nic.png)  
 > ![Client IP configuration](images/client-ipconfig.png)
 
@@ -206,8 +190,6 @@ Then join the machine to the domain:
 4. Provide domain admin credentials when prompted.
 5. Restart the client and log in with a domain account.
 
-> Screenshot:
->
 > ![Join the domain](images/client-join-domain.png)
 
 ---
@@ -223,7 +205,5 @@ To validate the full setup:
    - The account exists in **Active Directory Users and Computers**.
    - The `whoami` command returns the correct `DOMAIN\username`.
 
-> Screenshots:
->
 > ![Random user logon test](images/random-login.png)  
 > ![whoami test](images/whoami.png)
