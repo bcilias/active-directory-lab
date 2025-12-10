@@ -107,7 +107,7 @@ To allow the internal network to access the Internet:
 3. Set the **external NIC** as the public interface.
 4. Enable NAT so traffic from `172.16.0.0/24` is translated out to the Internet.
 
-> ![Install RRAS](images/install-rras.png)  
+> ![Install RRAS](images/installation-rras.png)  
 > ![Configure NAT](images/configure-nat.png)
 
 ---
