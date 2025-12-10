@@ -77,7 +77,6 @@ On the **internal NIC**, configure:
 
 - IP address: `172.16.0.1`
 - Subnet mask: `255.255.255.0`
-- Default gateway: *(empty)*
 - DNS: `127.0.0.1` (the DC will run DNS)
 
 > ![Internal NIC configuration](images/ws2019-nic-internal.png)  
