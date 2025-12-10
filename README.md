@@ -148,21 +148,21 @@ On the domain controller:
 
 ### 6. Prepare the user list
 
-On the DC, create a working folder (for example `C:\AD-Lab\`) and copy the `users.txt` file there.
+On the DC, create a working folder (for example `C:\AD-Lab\`) and copy the `names.txt` file there.
 
-A sample `users.txt` file is provided in this repository under `data/users.txt`, so you can use it as-is for testing or replace it with your own file using the same format.
+A sample `names.txt` file is provided in this repository under `data/names.txt`, so you can use it as-is for testing or replace it with your own file using the same format.
 
-> ![TXT file with user names](images/users-txt.png)
+> ![TXT file with user names](images/names-txt.png)
 
 ---
 
 ### 7. PowerShell script – automatic user creation
 
-The script `Create-ADUsers.ps1` runs on the domain controller and automates the creation of Active Directory users based on the `users.txt` file.
+The script `Create-Users.ps1` runs on the domain controller and automates the creation of Active Directory users based on the `names.txt` file.
 
 It performs the following actions:
 
-1. Reads the `users.txt` file (for example from `C:\AD-Lab\data\users.txt`).
+1. Reads the `names.txt` file (for example from `C:\AD-Lab\data\names.txt`).
 2. Splits each line into `FirstName` and `LastName`.
 3. Builds:
    - `sAMAccountName` (e.g. `jdoe`)
