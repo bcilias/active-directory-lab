@@ -211,6 +211,6 @@ To validate the full setup:
 
 ## Conclusion
 
-This lab provides a complete, end-to-end **Active Directory baseline** in an isolated environment: a domain controller delivering **AD DS/DNS**, internal **DHCP**, and **NAT (RRAS)**, plus a Windows 10 client successfully joined to the domain. It also demonstrates a practical automation use case by **bulk-creating users from a text file via PowerShell** and validating real logons from the client. :contentReference[oaicite:0]{index=0}
+This lab provides a complete, end-to-end **Active Directory baseline** in an isolated environment: a domain controller delivering **AD DS/DNS**, internal **DHCP**, and **NAT (RRAS)**, plus a Windows 10 client successfully joined to the domain. It also demonstrates a practical automation use case by **bulk-creating users from a text file via PowerShell** and validating real logons from the client.
 
 **Next improvements** could include: structuring users with multiple **OUs + GPOs**, implementing stronger **password/account lockout policies**, creating **security groups** and mapping permissions (shared folders), and extending the script to handle duplicates, logging, and group assignments.
